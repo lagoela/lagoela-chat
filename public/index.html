@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lagoela's chat</title>
+  </head>
+  <style>
+    ul {
+      height: 80vh;
+      background-color: white;
+      width: 90vw;
+      margin: 2px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    input {
+        width: 85vw;
+    }
+  </style>
+  <body>
+    <h1>Lagoela's chat</h1>
+    <ul id="messages"></ul>
+    <form action="" id="form">
+      <input type="text" id="input" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+    </script>
+  </body>
 </html>
